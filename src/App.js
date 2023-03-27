@@ -1,9 +1,13 @@
+import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  // const handleChange = (e) => {
-  //   getSearch(e.target.value);
-  // };
+  const [coins, setCoins] = useState([]);
+  const [search, setSearch] = useState("");
+
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
 
   return (
     <div className="coin-app">
@@ -13,7 +17,7 @@ function App() {
           <input
             className="coin-input"
             type="text"
-            // onChange={handleChange}
+            onChange={handleChange}
             placeholder="Search"
           />
         </form>
