@@ -34,3 +34,34 @@
 .coin-symbol {
     text-transform: uppercase;
 }
+
+.coin-data {
+    display: flex;
+    text-align: right;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.coin-price {
+    width: 110px;
+}
+
+.coin-volumne {
+    width: 155px;
+}
+
+.coin-marketcap {
+    width: 230px;
+}
+
+.coin-percent {
+    width: 100px;
+}
+
+.red {
+    color: #f00606;
+}
+
+.green {
+    color: #11d811;
+}
