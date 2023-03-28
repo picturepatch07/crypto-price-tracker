@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Coin from "./Coin";
 import "./App.css";
 
 function App() {
@@ -39,6 +40,20 @@ function App() {
           />
         </form>
       </div>
+      {filteredCoins.map((coin) => {
+        return (
+          <Coin
+            key={coin.id}
+            name={coin.name}
+            price={coin.current_price}
+            symbol={coin.symbol}
+            marketcap={coin.total_volume}
+            volume={coin.market_cap}
+            image={coin.image}
+            priceChange={coin.price_change_percentage_24h}
+          />
+        );
+      })}
     </div>
   );
 }
